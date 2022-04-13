@@ -10,5 +10,6 @@ export type UserAvatarPropsType = {
   imageStyle: ImageStyle
   style?: StyleProp<ViewStyle>
   borderRadius: number
-  component: Object
+  component: Object,
+  containerStyle: Object
 }

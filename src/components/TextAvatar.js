@@ -8,6 +8,7 @@ const TextAvatar = (props) => {
     name,
     size,
     textColor,
+    containerStyle
   } = props;
 
   const textContainerStyle = {
@@ -20,7 +21,7 @@ const TextAvatar = (props) => {
   };
 
   return (
-    <View style={textContainerStyle}>
+    <View style={[textContainerStyle, containerStyle]}>
       <Text
         style={{
           color: textColor,
@@ -38,6 +39,7 @@ TextAvatar.propTypes = {
   name: PropTypes.string,
   size: PropTypes.number,
   textColor: PropTypes.string,
+  containerStyle: PropTypes.object
 };
 
 export default TextAvatar;

@@ -24,6 +24,7 @@ const UserAvatar = (props) => {
     style,
     borderRadius,
     component,
+    containerStyle
   } = props;
 
   // Validations
@@ -33,7 +34,7 @@ const UserAvatar = (props) => {
   }
 
   const [inner, setInner] = useState(
-      <TextAvatar textColor={textColor} size={size} name={name} />,
+      <TextAvatar textColor={textColor} size={size} name={name} containerStyle={containerStyle}/>,
   );
 
   useEffect(() => {
@@ -71,6 +72,7 @@ UserAvatar.propTypes = {
   style: PropTypes.object,
   borderRadius: PropTypes.number,
   component: PropTypes.any,
+  containerStyle: PropTypes.object
 };
 
 UserAvatar.defaultProps = {
